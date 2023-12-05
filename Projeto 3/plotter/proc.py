@@ -16,22 +16,22 @@ def ope(operacao) -> list:
     if operacao == 'quad':
         coef = es.leitora_coeficientes(operacao)
         intervalo = es.leitora_int()
-        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*10))
+        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*1000))
         y = float(coef[0])*x**2 + float(coef[1])*x + float(coef[2])
         return [x,  y]
     elif operacao == 'afim':
         coef = es.leitora_coeficientes(operacao)
         intervalo = es.leitora_int()
-        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*10))
+        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*1000))
         y = float(coef[0])*x + float(coef[1])
         return [x,  y]              
     elif operacao == 'log':
         intervalo = es.leitora_int()
-        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*10))
+        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*1000))
         y = np.log(x)
         return [x, y]
     else:
         intervalo = es.leitora_int()
-        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*10))
+        x = np.linspace(intervalo[0], intervalo[1], int((intervalo[1]-intervalo[0])*1000))
         y = np.exp(x)
         return [x, y]
