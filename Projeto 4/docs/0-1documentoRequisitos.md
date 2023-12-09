@@ -10,6 +10,6 @@ Este documento reúne as etapas referente aos requisitos para o desenvolvimento 
 Dada uma lista de pontos com duas coordenadas, o aplicativo deve encontrar uma função que ajuste os pontos em uma curva.
 
 
-# Documento de Definição de Software a partir dos Requisitos
+## Documento de Definição de Software a partir dos Requisitos
 
 1. ![Documento de Definição de Sistemas](0-1docDefinicaoSistemas.md)
