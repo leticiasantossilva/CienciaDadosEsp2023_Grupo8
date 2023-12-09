@@ -1,8 +1,12 @@
 ## Projeto de dados
 
-Os dados que devem ser lidos são os seguintes:
+Os dados que devem ser lidos serão nas seguintes estruturas:
 
-1. tipo de função a ser plotada - tipo string;
-2. se função afim ou quadrática, a lista de coeficientes - estrutura lista;
 
-O resultado do processamento deverá se dar em tela por meio de objetos de gráficos.
+1. Usar uma lista para armazenar cada um dos pontos inseridos pelo usuário.
+
+2. Cada ponto será um numpy.ndarray() com duas posições.
+
+
+O resultado do processamento deverá se dar em tela exibindo o gráfico.
+

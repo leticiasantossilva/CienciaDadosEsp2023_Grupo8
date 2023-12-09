@@ -1,7 +1,15 @@
 # Documento de Projeto de Software
 
-![Projeto de Arquitetura](1-1projArquitetura.md)
+Este documento reúne as etapas referentes ao projeto de desenvolvimento do Aplicativo de Ajuste de Curvas a Dados.
 
-![Projeto de Dados](1-1projDados.md)
+As fases do projeto são as seguintes:
 
-![Projeto de Algoritmos](1-1projAlgoritmos.md)
+
+1. ![Projeto de Arquitetura](1-1projArquitetura.md)
+
+
+2. ![Projeto de Dados](1-1projDados.md)
+
+
+3. ![Projeto de Algoritmos](1-1projAlgoritmos.md)
+

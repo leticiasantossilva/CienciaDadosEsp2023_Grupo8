@@ -1,20 +1,14 @@
-"""
-Módulo de Processamento
-Descrição: Este módulo prevê o processamento de dados do Aplicativo de Ajuste de Curva de Dados.
-Autor: Letícia Santos e Ronaldo Debiasi
-Versão: 0.0.1
-Data: 05/12/2023
 
-"""
-
-
-# Importação das bibliotecas da geração de gráficos
+# Importando bibliotecas
 
 import numpy as np
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from scipy import interpolate
 
-# Função de interpolação
+
+
+# função de interpolação
 
 def interp(dados: list) -> list:
     """ Esta função aplica interpolação na lista de pontos inserida pelo usuário, gerando uma lista com elementos np.ndarray """
@@ -30,4 +24,3 @@ def interp(dados: list) -> list:
     ynew = f(xnew)   # use interpolation function returned by `interp1d`
     
     return (x, y, xnew, ynew)
-

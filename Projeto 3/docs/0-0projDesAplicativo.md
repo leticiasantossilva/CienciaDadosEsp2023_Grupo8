@@ -1,14 +1,12 @@
-# Projeto de Desenvolvimento de Aplicativo de Ajuste de Curva de Dados
+# Projeto de Desenvolvimento de Aplicativo de Plotagem
 
 ## 1. Introdução
 
-Este é o projeto de desenvolvimento de um Aplicativo de Ajuste de Curva de Dados. Aqui estruturamos as partes deste projeto.
-
+Este é o projeto de desenvolvimento de um Aplicativo de Plotar Gráficos de Funções. Aqui estruturamos as partes deste projeto.
 
 ### Problema
 
-Dada uma lista de pontos com duas coordenadas, o aplicativo deve encontrar uma função que ajuste os pontos em uma curva.
-
+O cliente solicitou um aplicativo capaz de plotar gráficos de quatro tipos de funções matemáticas.
 
 ### Sumário
 

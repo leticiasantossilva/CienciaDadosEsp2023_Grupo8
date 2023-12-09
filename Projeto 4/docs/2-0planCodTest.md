@@ -4,44 +4,41 @@ Tendo em vista o emprego de modelagem funcional no projeto do software, a codifi
 
 Utilizaremos a linguagem Python para codificação, uma vez que a mesma mostra-se a mais adequada ao desenvolvimento ágil de aplicações de pequena escala com interface de linha de comando.
 
-Empregaremos "REPL-driven development" como método de codificação, utilizando o ambiente de desenvolvimento integrado Jupyter Lab para facilitar sua adoção.
+Empregaremos REPL (Read-Eval-Print Loop) Driven Development (RDD) como método de codificação, utilizando o ambiente de desenvolvimento integrado Jupyter Lab para facilitar sua adoção.
 
-Em um segundo momento, isto é, após a codificação com RDD, procede-se à escrita de testes unitários automatizados, usando a ferramenta pytest, para prover ainda mais segurança a respeito da correção do código.
+A fim de representar os pontos dentro de um sistema de eixos cartesianos necessários à plotagem de gráficos de funções, utilizaremos a biblioteca Python NumPy, Python Scipy e, para plotagem dos gráficos, a biblioteca Python MatPlotLib.
 
-A fim de representar os pontos dentro de um sistema de eixos cartesianos necessários à plotagem de gráficos de funções, utilizaremos a biblioteca Python NumPy e, para plotagem dos gráficos propriamente dita, a biblioteca Python MatPlotLib.
 
 ## Módulo entrada/saida - es.py
 
-### 1. Requisito 1b
+### Entrada de dados
 
-Plotar o gráfico
+Função leitora() -> lista com pontos
 
-função impressora(grafico: objeto gráfico) -> null
-Esta função imprime na tela o gráfico da função escolhida pelo usuário.
+Esta função receberá do usuário os pontos desejados, estando ordenados pela coordenada X de ponto (x,y).
 
-### 2. Requisito 2
 
-Deve haver um menu com as quatro funções capazes de serem plotadas pelo aplicativo.
+### 3. Saída do gráfico da curva ajustada
 
-função leitor_funcao() -> string
-Imprime um menu na tela contendo as funções afim, quadrática, logarítmica e exponencial para o usuário escolher qual delas plotar.
+Função plota_curva(lista com pontos) e imprimir o gráfico
 
-### 3. Requisitos 3 e 4
+Esta função gera o gráfico com o resultado do ajuste de curva dos pontos inseridos pelo usuário. 
 
- Caso o usuário escolha a função afim, na sequência, ele deverá poder informar os coeficientes da função.
 
-- Idêntico ao requisito 2, mas sendo válido para função quadrática.
 
-função leitor_coeficiente(nome_funcao: string) -> lista
-Lê os coeficientes no caso de o usuário escolher plotar uma função afim ou quadrática.
+## Módulo de Processamento - proc.py
 
-## Módulo de processamento de gráficos (designer)
+### Interpolação da lista de pontos
 
-Este módulo deverá prover uma função para plotar o gráfico da função escolhida pelo usuário.
+Função interp(lista com pontos) -> funções
 
-### 1. Requisito 1a
+Esta função será responsável por processar os pontos, através de interpolação, e encontrar a função que ajusta a curva.
 
-Determinar o gráfico
 
-função design(tipo_funcao: str, coeficientes: lista) -> objeto gráfico
-Esta função recebe o tipo de função a ser desenhada e a lista de coeficientes (se for necessário) e desenha o gráfico da função correspondente.
+
+## Módulo principal - __main__.py
+
+### Função main()
+
+main()
+Esta é a função principal que integra as fases de entrada, processamento e saída de dados.

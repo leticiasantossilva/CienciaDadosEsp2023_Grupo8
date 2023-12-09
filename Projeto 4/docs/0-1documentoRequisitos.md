@@ -1,37 +1,15 @@
-# Especificação de Requisitos do Aplicativo
+# Especificação de Requisitos do Aplicativo de Ajuste de Curva de Dados
 
 ## Introdução
+
+Este documento reúne as etapas referente aos requisitos para o desenvolvimento de um aplicativo de Ajuste de Curva de Dados.
 
 
 ## O problema
 
-O problema apresentado pelo cliente consiste na criação de um aplicativo que atenda aos seguintes requisitos
-
-### Requisito 1
-
-Plotar gráficos das seguintes funções reais de uma variável real:
-
-1. Função afim;
-2. Função quadrática;
-3. Função logarítmica, e
-4. Função exponencial.
-
-- Requisito (1a) - determinar o gráfico
-- Requisito (1b) - plotar o gráfico
-
-### Requisito 2
-
-Deve haver um menu com as quatro funções capazes de serem plotadas pelo aplicativo.
-
-### Requisito 3
-
-Caso o usuário escolha a função afim, na sequência, ele deverá poder informar os coeficientes da função.
-
-### Requisito 4
-
-Idêntico ao requisito 2, mas sendo válido para função quadrática.
+Dada uma lista de pontos com duas coordenadas, o aplicativo deve encontrar uma função que ajuste os pontos em uma curva.
 
 
-# Documento de Requisitos
+# Documento de Definição de Software a partir dos Requisitos
 
 1. ![Documento de Definição de Sistemas](0-1docDefinicaoSistemas.md)
