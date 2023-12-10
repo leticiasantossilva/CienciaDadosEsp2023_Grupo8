@@ -1,4 +1,4 @@
-## Projeto de dados
+# Projeto de dados
 
 Os dados que devem ser lidos serão nas seguintes estruturas:
 

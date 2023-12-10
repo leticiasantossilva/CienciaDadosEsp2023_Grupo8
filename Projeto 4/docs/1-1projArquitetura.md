@@ -2,7 +2,7 @@
 
 Este documento apresenta o projeto de arquitetura para o desenvolvimento de um Aplicativo de Ajuste de Curva de Dados.
 
-O aplicativo terá os seguintes móduloss:
+O aplicativo terá os seguintes módulos:
 1. Módulo de entrada e saída de dados (requisitos 1 e 3)
 2. Módulo de processamento com interpolação (requisito 1)
 
