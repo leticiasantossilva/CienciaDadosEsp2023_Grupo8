@@ -13,15 +13,21 @@ O aplicativo terá os seguintes módulos:
 
 Fase para solicitar ao usuário a escolha da variável do Balancete de despesa consolidado 2023 que deve ser analisada.
 
-Função leitor()
-Esta função receberá do usuário a definição que qual variável deve ser analisada.
+Função leitor_dados(url)
+Esta função inicia o processamento dos dados em CSV, usando a API de dados abertos do TCE-RS
+
+Função variavel()
+Esta função recebe do usuário a definição que qual variável financeira a ser analisada.
 
 ### Saída de dados
 
 - Requisito 2 (RU2) - Plotar o gráfico dos dados
 
-Função saida()
-Esta função irá apresentar ao usuário o gráfico dos dados analisados, assim como a média e o desvio-padrão calculados.
+Função plotador(dados)
+Esta função irá apresentar ao usuário o gráfico dos dados analisados.
+
+Função impressora(resultados)
+Esta função irá imprimir para o usuário os resultados da média e do desvio-padrão calculados.
 
 
 ## Módulo de Processamento
@@ -29,12 +35,12 @@ Esta função irá apresentar ao usuário o gráfico dos dados analisados, assim
 - Requisito 1 (RU1) - Coleta de dados
 
 Função coleta_dados(api_tce, variavel)
-Esta função irá realizar a coleta de dados em formato CSV, usando a API de dados abertos do TCE-RS.
+Esta função irá realizar a análise dos dados da variável escolhida, usando a API de dados abertos do TCE-RS.
 
 - Requisito 3 (RU3) - Calcular média e desvio-padrão dos dados
 
-Função media_desv(variavel)
-Esta função irá calcular a média e o desvio-padrão da variável de dados escolhida.
+Função media_desv(dados)
+Esta função irá calcular a média e o desvio-padrão da variável financeira dos dados escolhida.
 
 
 ## Desenho do projeto

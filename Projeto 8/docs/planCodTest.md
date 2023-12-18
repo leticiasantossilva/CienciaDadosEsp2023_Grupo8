@@ -13,26 +13,31 @@ Para a leitura de dados em CSV e a análise de dados, será utilizada a bibliote
 
 Fase para solicitar ao usuário a escolha da variável do Balancete de despesa consolidado 2023 que deve ser analisada.
 
-Função leitor() -> string
-Esta função receberá do usuário a definição que qual variável financeira deve ser analisada.
+Função leitor_dados(url: str) -> pd.DataFrame
+Esta função inicia o processamento dos dados em CSV, usando a API de dados abertos do TCE-RS
+
+Função variavel() -> str
+Esta função recebe do usuário a definição que qual variável financeira a ser analisada.
 
 ### Saída de dados
 
 - Requisito 2 (RU2) - Plotar o gráfico dos dados
 
-Função saida(grafico, media: float, desvio_padrao: float) -> None
-Esta função irá apresentar ao usuário o gráfico dos dados analisados, assim como a média e o desvio-padrão calculados.
+Função plotador(dados: pd.DataFrame) -> None
+Esta função irá apresentar ao usuário o gráfico dos dados analisados.
 
+Função impressora(resultados: list) -> None
+Esta função irá imprimir para o usuário os resultados da média e do desvio-padrão calculados.
 
 ## Módulo de Processamento
 
 - Requisito 1 (RU1) - Coleta de dados
 
-Função coleta_dados(api_tce: string, variavel: string) -> DataFrame
-Esta função irá realizar a coleta de dados em formato CSV, usando a API de dados abertos do TCE-RS.
+Função coleta_dados(api_tce: pd.DataFrame, variavel: str) -> pd.DataFrame
+Esta função irá realizar a análise dos dados da variável escolhida, usando a API de dados abertos do TCE-RS.
 
 - Requisito 3 (RU3) - Calcular média e desvio-padrão dos dados
 
-Função media_desv(dados_variavel: pandas.DataFrame) -> lista 
+Função media_desv(dados: pandas.DataFrame) -> list 
 Esta função irá calcular a média e o desvio-padrão da variável financeira dos dados escolhida.
 

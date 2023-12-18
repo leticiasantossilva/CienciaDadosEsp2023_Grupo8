@@ -1,11 +1,10 @@
 """
 Módulo Principal
 
-#ALTERAR
-Descrição: Este é o módulo com a função principal que integra as fases de entrada, processamento e saída de dados do Aplicativo de Plotagem.
+Descrição: Este é o módulo com a função principal que integra as fases de entrada, processamento e saída de dados do Aplicativo de análise de dados via API.
 Autor: Letícia Santos e Ronaldo Debiasi
 Versão: 0.0.1
-Data: 04/12/2023
+Data: 12/12/2023
 
 """
 
@@ -14,7 +13,10 @@ Data: 04/12/2023
 import es
 import proc
 
+
+# Função principal
 def main():
+    """ Esta é a função que integra as fases de entrada, processamento e saída de dados do Aplicativo de análise de dados via API """
     url = "https://dados.tce.rs.gov.br/dados/municipal/balancete-despesa/2023.csv"
     print('Lendo dados da URL: https://dados.tce.rs.gov.br/dados/municipal/balancete-despesa/2023.csv')
     leitor = es.leitor_dados(url)
@@ -31,6 +33,7 @@ def main():
 
 
 
+# Executando a função do aplicativo
 if __name__ == "__main__":
     main()
     

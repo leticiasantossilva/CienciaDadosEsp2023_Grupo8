@@ -2,7 +2,7 @@
 
 A estrutura de dados armazenados no projeto de aplicativo de análise de dados será a seguinte:
 
-- A API de dados do Balancete será armazenada em uma string.
+- A url da API de dados do Balancete será armazenada em uma string.
 
 - A escolha da variável a ser analisada será armazenada em uma string.
 
