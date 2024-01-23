@@ -26,7 +26,7 @@ Esta função realiza a leitura de preços de ações.
 Função leitor_taxa() -> array
 Esta função executa a leitura da taxa CDI.
 
-- Requisito RU4 e Requisito RU10:
+- Requisito RU4
 
 Função leitor_indice() -> array
 Esta função lê o valor do índice da carteira de mercado (IBOVESPA).
@@ -39,6 +39,7 @@ Esta função deve realizar a leitura das ações para estimação do CAPM.
 
 ### Saída de dados
 
+- Requisito RU10
 Função grava_arquivo(var: objetoArquivo) -> Null
 Esta função produz um arquivo CSV contendo a data do resultado da estimação em cada semana em que o modelo for estimado.
  
