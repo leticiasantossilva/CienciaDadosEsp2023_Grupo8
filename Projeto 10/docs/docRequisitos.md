@@ -2,7 +2,7 @@
 
 ## Introdução 
 
-Este documento apresenta os requisitos para o projeto de desenvolvimento de um aplicativo de ciência de dados em economia e finanças.
+Este documento apresenta os requisitos para o projeto de desenvolvimento de um aplicativo de apredizado de máquina com ciência de dados em economia e finanças.
 
 ### Problema
 
@@ -29,7 +29,7 @@ O ativo livre de risco será a taxa CDI.
 A carteira de mercadoserá o Índice Ibovespa.
 
 #### Requisito RU5 - método de estimação do modelo
-O modelo deverá ser estimado por mínimo quadrados ordinários.
+O modelo deverá ser estimado por mínimo quadrados ordinários, utilizando machine learning.
 
 #### Requisito RU6 - teste do alfa de Jenses
 O alfa de Jensen deverá ser testado para nulidade com o emprego do teste t.
