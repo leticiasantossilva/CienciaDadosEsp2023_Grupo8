@@ -35,13 +35,6 @@ def alfa(acoes):
     mercado = es.leitor_indice()
     cdi1 = es.leitor_cdi()
 
-    #CDI tem que estar na mesma base do mercado (mensal, diario, semanal)
-    #CDI DIARIO
-    cdi = pd.read_json('https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json')
-    #CDI MES
-    cdi = pd.read_json('https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados?formato=json')['valor']
-    cdi1 = np.array(cdi[-len(mercado):])
-
     for item in acoes:
         acao = es.leitor_precos(item)
         y = acao - cdi1
