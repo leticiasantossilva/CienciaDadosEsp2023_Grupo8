@@ -10,7 +10,7 @@ O cliente solicitou um aplicativo que colete automaticamente dados da web e esti
 
 ## Definição do Sistema
 
-O sistema deverá coletar dados de preço de fechamento das uarta-feiras de todas as semanas durante 260 semanas (5 anos), a amostra deverá conter dados de 10 empresas com ações negociadas no mercado à vista da B3. Deverá ser calculado o beta das ações, bem como o alfa de Jensen e risco específico (volatilidade estimada do resíduo do CAPM) das ações; acrescentando o resultado em um arquivo CSV denominado `resultados_capm.csv` para cada semana.
+O sistema deverá coletar dados de preço de fechamento das quarta-feiras de todas as semanas durante 260 semanas (5 anos), a amostra deverá conter dados de 10 empresas com ações negociadas no mercado à vista da B3. Deverá ser calculado o beta das ações, bem como o alfa de Jensen e risco específico (volatilidade estimada do resíduo do CAPM) das ações; acrescentando o resultado em um arquivo CSV denominado `resultados_capm.csv` para cada semana.
 
 ## Especificação de requisitos do sistema
 
@@ -26,7 +26,7 @@ Os preços de fechamento das ações negociadas deverão ser coletados.
 O ativo livre de risco será a taxa CDI.
 
 #### Requisito RU4 - carteira de mercado
-A carteira de mercadoserá o Índice Ibovespa.
+A carteira de mercado será o Índice Ibovespa.
 
 #### Requisito RU5 - método de estimação do modelo
 O modelo deverá ser estimado por mínimo quadrados ordinários.
