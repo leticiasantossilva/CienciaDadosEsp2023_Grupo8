@@ -16,6 +16,19 @@ import proc
 
 # Função principal
 def main():
+    acoes = es.leitor_acoes()
+    proc.modelo(acoes)
+
+
+
+
+
+
+
+
+
+
+
     """ Esta é a função que integra as fases de entrada, processamento e saída de dados do Aplicativo de análise de dados via API """
     url = "https://dados.tce.rs.gov.br/dados/municipal/balancete-despesa/2023.csv"
     print('Lendo dados da URL: https://dados.tce.rs.gov.br/dados/municipal/balancete-despesa/2023.csv')

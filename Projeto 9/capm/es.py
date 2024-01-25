@@ -21,6 +21,27 @@ from datetime import datetime, timedelta
 import os
 
 
+# Imput acoes
+
+def leitor_acoes() -> list:
+    acoes = []
+    i = 1
+    while i < 10:
+        acoes.append(input(f'Digite o Ticker da ação que deseja avaliar {i} de 10: '))
+    
+    return acoes
+
+# Leitura do CDI
+
+def leitor_cdi(mercado) -> np.array:
+    #CDI tem que estar na mesma base do mercado (mensal, diario, semanal)
+    #CDI DIARIO
+    cdi = pd.read_json('https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json')
+    #CDI MES
+    cdi = pd.read_json('https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados?formato=json')['valor']
+    cdi1 = np.array(cdi[-len(mercado):])
+    return cdi1
+
 # Leitura de retornos de preços de ações
 
 def leitor_precos(ticker:str) -> np.array:

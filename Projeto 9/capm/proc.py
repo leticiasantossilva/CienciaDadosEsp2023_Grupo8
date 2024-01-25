@@ -17,20 +17,40 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
 
+import es
 
-# Função de processamento dos dados da variável no DataFrame
-def coleta_dados(api_tce, variavel):
-    """ Esta função realiza a análise dos dados da variável escolhida no dataframe do Balancete """
-    coluna = ['', 'VL_DOTACAO_INICIAL', 'VL_CREDITOS_SUPLEMENTARES', 'VL_CREDITOS_ESPECIAIS', 'VL_CREDITOS_EXTRAORDINARIOS', 'VL_REDUCAO_DOTACAO', 'VL_TRANSFERENCIA', 'VL_TRANSPOSICAO', 'VL_REMANEJAMENTO', 'VL_EMPENHADO', 'VL_LIQUIDADO', 'VL_PAGO', 'VL_LIMITADO', 'VL_RECOMPOSICAO', 'VL_PREVISAO_EXECUCAO']
+def modelo(acoes):
+    mercado = es.leitor_indice()
+    for item in acoes:
+        acao = es.leitor_precos(item)
+        df = pd.DataFrame({'Ativo':acao, 'Mercado':mercado})
+        model = smf.ols('Ativo ~ Mercado', data=df).fit()
+        resultado = model.summary()
 
-    resultado = api_tce[coluna[int(variavel)]]
-    
-    return resultado
+        print(f'Ativo: {item}')
+        print(resultado, '\n')
 
 
-# Função de calcular a média e o desvio-padrão
-def media_desv(dados):
-    """ Esta função calcula a média e o desvio-padrão da variável financeira dos dados escolhida """
-    resultado_media = np.average(dados)
-    resultado_desv = np.std(dados)
-    return [resultado_media, resultado_desv]
+def alfa(acoes):
+    mercado = es.leitor_indice()
+    cdi1 = es.leitor_cdi()
+
+    #CDI tem que estar na mesma base do mercado (mensal, diario, semanal)
+    #CDI DIARIO
+    cdi = pd.read_json('https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json')
+    #CDI MES
+    cdi = pd.read_json('https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados?formato=json')['valor']
+    cdi1 = np.array(cdi[-len(mercado):])
+
+    for item in acoes:
+        acao = es.leitor_precos(item)
+        y = acao - cdi1
+        x = mercado - cdi1
+        df = pd.DataFrame({'Rativo': y, 'Rmercado': x})
+        model = smf.ols('Rativo ~ Rmercado', data=df).fit()
+
+        #Alfa Jensen é o intercepto, teste t do intercepto
+        print(f'Ativo: {item}')
+        print(f'Alfa de Jensen: {item}')
+        print(model.summary(), '\n')
+
