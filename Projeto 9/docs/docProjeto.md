@@ -24,7 +24,7 @@ Função de leitura da taxa CDI - leitor_taxa()
 - Função para ler o valor do índice da carteira de mercado (IBOVESPA) - leitor_indice()
 - Função de leitura do teclado para escolha da pasta de gravação na primeira iniciação do sistema - leitor_pasta()
 - Função de leitura das ações para estimação do CAPM - leitor_acoes()
-- Função de escrita que produz um arquivo CSV contendo a data do resultado da estimação em cada semana em que o modelo for estimado - grava_arquivo()
+- Função de escrita que produz um arquivo CSV contendo a data do resultado da estimação em cada semana em que o modelo for estimado - grava_csv()
  
 
 ### Módulo de inferência econométrica do CAPM - proc.py

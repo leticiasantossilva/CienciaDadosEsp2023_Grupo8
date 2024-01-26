@@ -68,7 +68,8 @@ def leitor_taxa() -> np.array:
     # selecionando as quarta-feiras
     filtro.set_index('data', inplace=True)
     dado_cdi = filtro[filtro.index.weekday == 2]
-    return np.array(dado_cdi)
+    retorno = dado_cdi['valor'].dropna()
+    return np.array(retorno)
 
 
 # Leitor das ações
@@ -97,10 +98,16 @@ def leitor_pasta() -> str:
 
 #Função de gravação de dados CAPM em novo arquivo .csv
 
-def grava_csv(pasta_destino: str, resultado_capm: pd.DataFrame):
+def grava_csv(pasta_destino: str, ticker:str, alfa, beta, sigma):
     """ Esta função cria um novo arquivo CSV com os resultados a cada estimação CAPM realizada """
-    arquivo = resultado_capm
-    nome_arquivo = "resultados_capm.csv"
+    arquivo = pd.DataFrame({
+        'Nome da Ação': ticker,
+        'Data': datetime.now().strftime('%Y-%m-%d'),
+        'Alfa': alfa,
+        'Beta': beta,
+        'Sigma': sigma
+    }, index=[0])
+    nome_arquivo = f"{ticker}_resultados_capm.csv"
     caminho = os.path.join(pasta_destino, nome_arquivo)
     
     arquivo.to_csv(caminho, index=False)
