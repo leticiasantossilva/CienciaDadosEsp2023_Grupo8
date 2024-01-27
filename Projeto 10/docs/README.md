@@ -5,7 +5,7 @@ Data: 13/12/2023
 
 ## Introdução
 
-Este é o termo de abertura do projeto de desenvolvimento de aplicativo de apredizado de máquina com ciência de dados em economia e finanças. Aqui estruturamos o projeto.
+Este é o termo de abertura do projeto de desenvolvimento de aplicativo que estima o modelo CAPM com previsão a partir de apredizado de máquina. Aqui estruturamos o projeto.
 
 ## Problema
 

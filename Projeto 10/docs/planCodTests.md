@@ -39,7 +39,7 @@ Esta função deve realizar a leitura das ações para estimação do CAPM.
 
 ### Saída de dados
 
-- Requisito RU10
+- Requisito RU6
 Função grava_arquivo(var: objetoArquivo) -> Null
 Esta função produz um arquivo CSV contendo a data do resultado da estimação em cada semana em que o modelo for estimado.
  
@@ -49,15 +49,3 @@ Esta função produz um arquivo CSV contendo a data do resultado da estimação 
 - Requisito RU5 - método de estimação do modelo
 Função estima_modelo()
 Esta é a função de estimação do modelo por mínimos quadrados ordinários, com método de machine learning.
- 
-- Requisito RU6 e RU7  - teste de nulidade do alfa de Jensen e do risco específico
-Função testa_nulidade_t_parametro()
-Esta função realiza teste da nulidade do alfa de Jensen (o emprego do teste t).
-
-- Requisito RU8 - teste do modelo
-Função testa_nulidade_F_parametros()
-Esta função avalia a nulidade conjunta dos parâmetros da regressão (usando o teste F).
-
-- Requisito RU9 - correlação serial 
-Função testa_corr()
-Esta função testa a correlação serial do modelo (usando o correlograma).
