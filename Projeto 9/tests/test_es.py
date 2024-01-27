@@ -98,17 +98,11 @@ def leitor_pasta() -> str:
 
 #Função de gravação de dados CAPM em novo arquivo .csv
 
-def grava_csv(pasta_destino: str, ticker:str, alfa, beta, sigma):
-    """ Esta função cria um novo arquivo CSV com os resultados a cada estimação CAPM realizada """
-    arquivo = pd.DataFrame({
-        'Nome da Ação': ticker,
-        'Data': datetime.now().strftime('%Y-%m-%d'),
-        'Alfa': alfa,
-        'Beta': beta,
-        'Sigma': sigma
-    }, index=[0])
-    nome_arquivo = f"{ticker}_resultados_capm.csv"
+def grava_csv(pasta_destino: str, dados):
+    """ Esta função cria um novo arquivo CSV com os resultados da estimação CAPM realizada """
+
+    nome_arquivo = "resultados_capm.csv"
     caminho = os.path.join(pasta_destino, nome_arquivo)
     
-    arquivo.to_csv(caminho, index=False)
+    dados.to_csv(caminho, index=False)
     print(f"Resultados salvos no arquivo {nome_arquivo}")
